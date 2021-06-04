@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EstablishmentSignInActivity"
+    android:background="#eef8ff">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/blue_wave_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgEstablishmentActivityBottomWave"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/blue_wave_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivEstablishmentSignInActivityReturn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/img_return"
+        android:background="@drawable/bg_return"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#2d4081" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="150dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layoutGotoEstablishmentSignUp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Sign In"
+                android:textSize="50dp"
+                android:textColor="@color/dark_violet"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:hint="Email"
+                app:startIconDrawable="@drawable/business"
+                app:endIconMode="clear_text"
+
+                android:theme="@style/LoginTextInputLayoutStyle"
+                android:foregroundTint="@color/dark_violet"
+                android:textColorHint="@color/dark_violet"
+                app:hintTextColor="@color/dark_violet"
+                app:boxStrokeColor="@color/dark_violet"
+                app:helperTextTextColor="@color/dark_violet"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:startIconTint="@color/dark_violet"
+                app:boxStrokeWidth="2dp"
+                app:endIconTint="@color/dark_violet">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEstablishmentEmail"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:textColor="#2d4081"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:hint="Password"
+                app:startIconDrawable="@drawable/key"
+                app:endIconMode="password_toggle"
+
+                android:theme="@style/LoginTextInputLayoutStyle"
+                android:foregroundTint="@color/dark_violet"
+                android:textColorHint="@color/dark_violet"
+                app:hintTextColor="@color/dark_violet"
+                app:boxStrokeColor="@color/dark_violet"
+                app:helperTextTextColor="@color/dark_violet"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:startIconTint="@color/dark_violet"
+                app:boxStrokeWidth="2dp"
+                app:endIconTint="@color/dark_violet">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEstablishmentPassword"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp"
+                    android:inputType="textPassword"
+                    android:textColor="#eef8ff"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEstablishmentSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn"
+                android:fontFamily="sans-serif-black"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:padding="15dp"
+                android:textColor="#eef8ff"
+                android:layout_marginTop="40dp"
+                android:text="Sign In"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutGotoEstablishmentSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1e80c9"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Don't have an account?"/>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2d4081"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Sign up"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
